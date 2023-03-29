@@ -52,6 +52,7 @@ builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssemblies(Assembly.Get
 //builder.Services.AddScoped<IDbContext, PostgreDbContext>();
 //builder.Services.AddScoped<BE_CQRS.Repository.RepositotyMongo.ITypeUnitRepo, BE_CQRS.Repository.RepositotyMongo.TypeUnitRepo>;
 builder.Services.AddScoped<ITypeUnit, BE_CQRS.Repository.RepositoryPostgre.TypeUnitRepo>();
+builder.Services.AddScoped<ITypeUnitRepo, TypeUnitRepo>();
 
 // kết nối db mongodb
 //builder.Services.AddSingleton<MongoDbContext>();

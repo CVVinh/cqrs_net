@@ -41,8 +41,8 @@ namespace BE_CQRS.Application
 
             // Đăng ký IDbContext và các lớp Repository
             //services.AddScoped<IRepository<TypeUnit>, Repository<TypeUnit>>();
-            services.AddScoped<IDbContext, PostgreDbContext>();
-            services.AddScoped<ITypeProduct, TypeProductRepo>();
+            //services.AddScoped<IDbContext, PostgreDbContext>();
+            //services.AddScoped<ITypeProduct, TypeProductRepo>();
 
             //services.AddScoped<GetAllTypeUnitQuery>();
             //services.AddScoped<GetByIdTypeUnitQuery>();
