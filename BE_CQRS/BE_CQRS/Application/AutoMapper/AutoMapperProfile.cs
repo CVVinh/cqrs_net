@@ -10,9 +10,9 @@ namespace BE_CQRS.Application.AutoMapper
     {
         public AutoMapperProfile() 
         {
-            CreateMap<CreateTypeUnitCommand, TypeUnit>().ReverseMap();
-            CreateMap<UpdateTypeUnitCommand, TypeUnit>().ReverseMap();
-            CreateMap<DeleteTypeUnitCommand, TypeUnit>().ReverseMap();
+            CreateMap<CreateTypeUnitCommand, TypeUnitPg>().ReverseMap();
+            CreateMap<UpdateTypeUnitCommand, TypeUnitPg>().ReverseMap();
+            CreateMap<DeleteTypeUnitCommand, TypeUnitPg>().ReverseMap();
         }
     }
 }

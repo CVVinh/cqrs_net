@@ -11,9 +11,7 @@ using BE_CQRS.Application.DTOs.Handlers.CreateHandlers;
 using BE_CQRS.Application.DTOs.Handlers.DeleteHandlers;
 using BE_CQRS.Application.DTOs.Handlers.UpdateHandlers;
 using BE_CQRS.Interface;
-using BE_CQRS.Interface.Commands;
 using BE_CQRS.Interface.InterfaceModel;
-using BE_CQRS.Interface.Query;
 using BE_CQRS.Models;
 using BE_CQRS.Models.Entities.Core;
 using BE_CQRS.MongoDBText;
@@ -51,11 +49,13 @@ builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssemblies(Assembly.Get
 
 //builder.Services.AddScoped<IDbContext, PostgreDbContext>();
 //builder.Services.AddScoped<BE_CQRS.Repository.RepositotyMongo.ITypeUnitRepo, BE_CQRS.Repository.RepositotyMongo.TypeUnitRepo>;
-builder.Services.AddScoped<ITypeUnit, BE_CQRS.Repository.RepositoryPostgre.TypeUnitRepo>();
-builder.Services.AddScoped<ITypeUnitRepo, TypeUnitRepo>();
+builder.Services.AddScoped<ITypeUnitPg, BE_CQRS.Repository.RepositoryPostgre.TypeUnitRepoPg>();
+builder.Services.AddScoped<ITypeUnitRepo, TypeUnitRepoMg>();
 
 // kết nối db mongodb
 //builder.Services.AddSingleton<MongoDbContext>();
+// Khai báo DbContext cho MongoDB
+//builder.Services.AddDbContext<MongoDbContext>(options => options.UseMongoDb(Configuration.GetConnectionString("MongoDbConnection")));
 
 // Add PostgreSQL
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<PostgreDbContext>(option =>

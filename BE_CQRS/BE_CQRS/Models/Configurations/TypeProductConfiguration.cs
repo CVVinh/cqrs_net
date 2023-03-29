@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BE_CQRS.Models.Configurations
 {
-    public class TypeProductConfiguration : IEntityTypeConfiguration<TypeProduct>
+    public class TypeProductConfiguration : IEntityTypeConfiguration<TypeProductPg>
     {
-        public void Configure(EntityTypeBuilder<TypeProduct> builder)
+        public void Configure(EntityTypeBuilder<TypeProductPg> builder)
         {
             builder.ToTable("TypeProduct", "public");
 

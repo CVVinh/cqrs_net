@@ -8,10 +8,10 @@ namespace BE_CQRS.Application.DTOs.Handlers.UpdateHandlers.Postgre
 {
     public class UpdateTypeUnitHandler : IRequestHandler<UpdateTypeUnitCommand, bool>
     {
-        private readonly ITypeUnit _typeUnitRepo;
+        private readonly ITypeUnitPg _typeUnitRepo;
         private readonly IMapper _mapper;
 
-        public UpdateTypeUnitHandler(ITypeUnit typeUnitRepo, IMapper mapper)
+        public UpdateTypeUnitHandler(ITypeUnitPg typeUnitRepo, IMapper mapper)
         {
             _typeUnitRepo = typeUnitRepo;
             _mapper = mapper;

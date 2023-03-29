@@ -1,12 +1,10 @@
 ﻿using BE_CQRS.Application.DTOs.Command.CreateCommand;
-using BE_CQRS.Interface.Query;
 using BE_CQRS.Interface;
 using BE_CQRS.Models.Entities.Core;
 using MediatR;
 using BE_CQRS.Models;
 using BE_CQRS.Interface.InterfaceModel;
 using BE_CQRS.Repository.RepositoryModel;
-using BE_CQRS.Interface.Commands;
 using BE_CQRS.Application.DTOs.Handlers.CreateHandlers;
 using BE_CQRS.Application.Data.Queries.GetByIdQuery;
 using BE_CQRS.Application.Data.Handlers.GetByIdHandler;

@@ -5,7 +5,7 @@ using MediatR;
 
 namespace BE_CQRS.Application.DTOs.Handlers.CreateHandlers.Mongo
 {
-    public class CreateTypeUnitHandler : IRequestHandler<CreateTypeUnitCommand, TypeUnit>
+    public class CreateTypeUnitHandler : IRequestHandler<CreateTypeUnitCommand, TypeUnitMg>
     {
         private readonly ITypeUnitRepo _typeUnitRepo;
 
@@ -14,9 +14,9 @@ namespace BE_CQRS.Application.DTOs.Handlers.CreateHandlers.Mongo
             _typeUnitRepo = typeUnitRepo;
         }
 
-        public async Task<TypeUnit> Handle(CreateTypeUnitCommand request, CancellationToken cancellationToken)
+        public async Task<TypeUnitMg> Handle(CreateTypeUnitCommand request, CancellationToken cancellationToken)
         {
-            var objectTypeUnit = new TypeUnit
+            var objectTypeUnit = new TypeUnitMg
             {
                 Name = request.Name,
                 TypeProduct = request.TypeProduct,

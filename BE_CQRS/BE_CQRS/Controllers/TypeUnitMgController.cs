@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BE_CQRS.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/TypeUnitPg")]
     [ApiController]
     public class TypeUnitMgController : ControllerBase
     {
@@ -19,10 +19,10 @@ namespace BE_CQRS.Controllers
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CreateTypeUnitCommand command)
         {
-            var result = await _mediator.Send(command);
+            //var result = await _mediator.Send(command);
 
-            //return CreatedAtAction(nameof(GetAll), new { id = result.Id }, result);
-            return Ok(result);
+            //return Ok(result);
+            return Ok();
         }
 
 

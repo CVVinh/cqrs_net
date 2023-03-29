@@ -5,13 +5,13 @@ namespace BE_CQRS.Interface
 {
     public interface IMongoDbContext
     {
-        IMongoCollection<DetailInformationTypeProduct> DetailInformationTypeProducts { get; set; }
-        IMongoCollection<InformationProduct> InformationProducts { get; set; }
-        IMongoCollection<InformationTypeProduct> InformationTypeProducts { get; set; }
-        IMongoCollection<Product> Products { get; set; }
-        IMongoCollection<ProductUnit> ProductUnits { get; set; }
-        IMongoCollection<TypeProduct> TypeProducts { get; set; }
-        IMongoCollection<TypeUnit> TypeUnits { get; set; }
-        IMongoCollection<Unit> Units { get; set; }
+        IMongoCollection<DetailInformationTypeProductPg> DetailInformationTypeProducts { get; set; }
+        IMongoCollection<InformationProductPg> InformationProducts { get; set; }
+        IMongoCollection<InformationTypeProductPg> InformationTypeProducts { get; set; }
+        IMongoCollection<ProductPg> Products { get; set; }
+        IMongoCollection<ProductUnitPg> ProductUnits { get; set; }
+        IMongoCollection<TypeProductPg> TypeProducts { get; set; }
+        IMongoCollection<TypeUnitPg> TypeUnits { get; set; }
+        IMongoCollection<UnitPg> Units { get; set; }
     }
 }

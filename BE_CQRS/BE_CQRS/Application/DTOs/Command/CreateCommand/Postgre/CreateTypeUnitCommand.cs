@@ -3,7 +3,7 @@ using MediatR;
 
 namespace BE_CQRS.Application.DTOs.Command.CreateCommand.Postgre
 {
-    public class CreateTypeUnitCommand : IRequest<TypeUnit>
+    public class CreateTypeUnitCommand : IRequest<TypeUnitPg>
     {
         public string Name { get; set; }
         public int? UserCreated { get; set; }

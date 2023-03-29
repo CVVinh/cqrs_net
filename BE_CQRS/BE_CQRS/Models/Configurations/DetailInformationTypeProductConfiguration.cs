@@ -5,9 +5,9 @@ using BE_CQRS.Models.Entities.Core;
 
 namespace BE_CQRS.Models.Configurations
 {
-    public class DetailInformationTypeProductConfiguration : IEntityTypeConfiguration<DetailInformationTypeProduct>
+    public class DetailInformationTypeProductConfiguration : IEntityTypeConfiguration<DetailInformationTypeProductPg>
     {
-        public void Configure(EntityTypeBuilder<DetailInformationTypeProduct> builder)
+        public void Configure(EntityTypeBuilder<DetailInformationTypeProductPg> builder)
         {
             builder.ToTable("DetailInformationTypeProduct", "public");
 

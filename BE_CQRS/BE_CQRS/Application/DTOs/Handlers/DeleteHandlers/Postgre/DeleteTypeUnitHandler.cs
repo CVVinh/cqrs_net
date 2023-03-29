@@ -7,10 +7,10 @@ namespace BE_CQRS.Application.DTOs.Handlers.DeleteHandlers.Postgre
 {
     public class DeleteTypeUnitHandler : IRequestHandler<DeleteTypeUnitCommand, bool>
     {
-        private readonly ITypeUnit _typeUnitRepo;
+        private readonly ITypeUnitPg _typeUnitRepo;
         private readonly IMapper _mapper;
 
-        public DeleteTypeUnitHandler(ITypeUnit typeUnitRepo, IMapper mapper)
+        public DeleteTypeUnitHandler(ITypeUnitPg typeUnitRepo, IMapper mapper)
         {
             _typeUnitRepo = typeUnitRepo;
             _mapper = mapper;

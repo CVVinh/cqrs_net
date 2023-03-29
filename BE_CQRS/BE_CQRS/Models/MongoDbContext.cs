@@ -16,13 +16,18 @@ namespace BE_CQRS.Models
             _database = client.GetDatabase(databaseName);
         }
 
-        public IMongoCollection<DetailInformationTypeProduct> DetailInformationTypeProducts => _database.GetCollection<DetailInformationTypeProduct>("DetailInformationTypeProducts");
-        public IMongoCollection<InformationProduct> InformationProducts => _database.GetCollection<InformationProduct>("InformationProducts");
-        public IMongoCollection<InformationTypeProduct> InformationTypeProducts => _database.GetCollection<InformationTypeProduct>("InformationTypeProducts");
-        public IMongoCollection<Product> Products => _database.GetCollection<Product>("Products");
-        public IMongoCollection<ProductUnit> ProductUnits => _database.GetCollection<ProductUnit>("ProductUnits");
-        public IMongoCollection<TypeProduct> TypeProducts => _database.GetCollection<TypeProduct>("TypeProducts");
-        public IMongoCollection<TypeUnit> TypeUnits => _database.GetCollection<TypeUnit>("TypeUnits");
-        public IMongoCollection<Unit> Units => _database.GetCollection<Unit>("Units");
+        protected IMongoCollection<T> GetCollection<T>(string name)
+        {
+            return _database.GetCollection<T>(name);
+        }
+
+        public IMongoCollection<DetailInformationTypeProductPg> DetailInformationTypeProducts => _database.GetCollection<DetailInformationTypeProductPg>("DetailInformationTypeProducts");
+        public IMongoCollection<InformationProductPg> InformationProducts => _database.GetCollection<InformationProductPg>("InformationProducts");
+        public IMongoCollection<InformationTypeProductPg> InformationTypeProducts => _database.GetCollection<InformationTypeProductPg>("InformationTypeProducts");
+        public IMongoCollection<ProductPg> Products => _database.GetCollection<ProductPg>("Products");
+        public IMongoCollection<ProductUnitPg> ProductUnits => _database.GetCollection<ProductUnitPg>("ProductUnits");
+        public IMongoCollection<TypeProductPg> TypeProducts => _database.GetCollection<TypeProductPg>("TypeProducts");
+        public IMongoCollection<TypeUnitPg> TypeUnits => _database.GetCollection<TypeUnitPg>("TypeUnits");
+        public IMongoCollection<UnitPg> Units => _database.GetCollection<UnitPg>("Units");
     }
 }

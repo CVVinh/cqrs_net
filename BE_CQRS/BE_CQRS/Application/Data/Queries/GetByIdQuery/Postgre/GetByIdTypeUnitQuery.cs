@@ -3,7 +3,7 @@ using MediatR;
 
 namespace BE_CQRS.Application.Data.Queries.GetByIdQuery.Postgre
 {
-    public class GetByIdTypeUnitQuery : IRequest<TypeUnit>
+    public class GetByIdTypeUnitQuery : IRequest<TypeUnitPg>
     {
         public int Id { get; set; }
         public GetByIdTypeUnitQuery(int id)
