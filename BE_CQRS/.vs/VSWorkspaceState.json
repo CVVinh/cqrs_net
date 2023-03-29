@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BE_CQRS",
+    "\\BE_CQRS\\Models",
+    "\\BE_CQRS\\Models\\Configurations",
+    "\\BE_CQRS\\Models\\Entities"
+  ],
+  "SelectedNode": "\\BE_CQRS\\Models\\Configurations\\ProductConfiguration.cs",
+  "PreviewInSolutionExplorer": false
+}
